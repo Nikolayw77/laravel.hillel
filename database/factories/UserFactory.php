@@ -26,9 +26,9 @@ $factory->define(User::class, function (Faker $faker) {
         Config::get('constants.db.roles.customer')
         )->first();
     return [
-        'name' => $faker->name,
+        'name' => $faker->firstName,
         'role_id' => $role->id,
-        'surname' => $faker->lastname,
+        'surname' => $faker->lastName,
         'phone' => FakerPhone::tollFreePhoneNumber(),
         'birthday' => $faker->dateTimeBetween('-70 years', '-18 years')->format('Y-m-d'),
         'email' => $faker->unique()->safeEmail,

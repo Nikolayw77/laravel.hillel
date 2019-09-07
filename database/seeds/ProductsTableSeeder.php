@@ -13,8 +13,8 @@ class ProductsTableSeeder extends Seeder
     {
         factory(\App\ProductImage::class, 10)->create();
         factory(\App\Product::class, 5)->create()->each(function ($product) {
-            $product->galleryImages()->attach(\App\ProductImage::all()->random(10));
-            $product->categories()->attach(\App\Category::all()->random(10));
+            $product->galleryImages()->attach(\App\ProductImage::all()->random(5));
+            $product->categories()->attach(\App\Category::all()->random(2));
         });
     }
 }

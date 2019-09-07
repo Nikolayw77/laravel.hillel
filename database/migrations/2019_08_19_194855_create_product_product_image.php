@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductProductImages extends Migration
+class CreateProductProductImage extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateProductProductImages extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('product_product_images')) {
-            Schema::create('product_product_images', function (Blueprint $table) {
+        if (!Schema::hasTable('product_product_image')) {
+            Schema::create('product_product_image', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->unsignedBigInteger('product_id');
                 $table->unsignedBigInteger('product_image_id');
