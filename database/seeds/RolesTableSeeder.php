@@ -1,7 +1,8 @@
 <?php
 
+use App\Role;
 use Illuminate\Database\Seeder;
-use League\Flysystem\Config;
+
 
 class RolesTableSeeder extends Seeder
 {

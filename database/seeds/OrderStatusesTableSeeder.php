@@ -1,7 +1,8 @@
 <?php
 
+use App\OrderStatus;
 use Illuminate\Database\Seeder;
-use League\Flysystem\Config;
+
 
 class OrderStatusesTableSeeder extends Seeder
 {
