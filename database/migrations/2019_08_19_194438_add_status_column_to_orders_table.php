@@ -33,8 +33,11 @@ class AddStatusColumnToOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            //
-        });
+        if (Schema::hasColumn('orders', 'status_id')) {
+            Schema::table('orders', function (Blueprint $table) {
+                $table->dropForeign('status_id');
+                $table->dropColumn('status_id');
+            });
+        };
     }
 }

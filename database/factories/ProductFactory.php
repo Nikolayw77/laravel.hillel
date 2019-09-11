@@ -5,13 +5,14 @@
 use App\Model;
 use App\Product;
 use Faker\Generator as Faker;
+use Faker\Provider\it_IT\Person as FakerPerson;
 
 $factory->define(Product::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence(2),
         'description' => $faker->sentences(12, true),
-        //'SKU' => FakerPerson::taxId(),
-        'SKU' => $faker->numberBetween(0, 1000000),
+        'SKU' => FakerPerson::taxId(),
+        //'SKU' => $faker->numberBetween(0, 1000000),
         'price' => $faker->randomFloat(2, 5, 200),
         'in_stock' => $faker->numberBetween(0, 15),
         'thumbnail' => $faker->image('public/storage/images/products', 400, 300),
