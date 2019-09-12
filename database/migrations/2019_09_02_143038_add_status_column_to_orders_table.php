@@ -20,7 +20,7 @@ class AddStatusColumnToOrdersTable extends Migration
 
                     $table->foreign('status_id')
                         ->references('id')
-                        ->on('order_statuse');
+                        ->on('order_statuses');
                 }
             });
         }
